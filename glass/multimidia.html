@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- LINGUAGEM PT-BR-->
+
+<head>
+	<meta charset="utf-8" /> <!-- PADRÃO DE CARACTER BR-->
+	<title>Tudo Sobre Google Glass</title>
+
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	<!--aponta para um documento css -->
+	<link rel="stylesheet" type="text/css" href="_css/media.css">
+	<!--aponta para um documento css -->
+	<link rel="shortcut icon" href="_imagens/icone.png" type="image/x-png">
+	<!--logo na aba do navegador -->
+	<script language="javascript" src="_javascript/funcoes.js"></script>
+
+</head>
+
+<body>
+
+	<div id="interface">
+
+		<header id="cabecalho">
+			<!--CABEÇALHO DO SITE <header>-->
+			<hgroup>
+				<!--GRUPOS DE TÍTULOS COM HIERARQUIA <hgroup>-->
+				<h1>Google Glass</h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+
+			<img id="icone" src="_imagens\multimidia.png">
+
+			<nav id="menu">
+				<!--MENU DE NAVEGAÇÃO <nav>-->
+				<h1>Menu Principal</h1>
+				<ul type="1" start="0  ">
+					<!--LISTA ORDENADA "<ol> DESORDENADA <ul>" -->
+					<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+							href="index.html">Home</a></li>
+					<!--ITEM DA LISTA <li>-->
+					<li onmouseover="mudaFoto('_imagens/especificacoes.png')"
+						onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+					<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+							href="fotos.html">Fotos</a></li>
+					<li onmouseover="mudaFoto('_imagens/multimidia.png')"
+						onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+					<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')">
+						<a href="fale-conosco.html">Fale conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="corpoEspecs">
+			<article id="noticia-principal">
+				<!--artigo -->
+				<header id="cabecalho-artigo">
+					<!--cabecalho do artigo, podendo ter vários cabecalhos-->
+					<hgroup>
+						<h3>Glass > Multimídia</h3>
+						<h1>Sons e Vídeos</h1>
+						<h2>por Gabriel Gregório Silveira Netto</h2>
+						<h3 class="direita ">Atualizado em 25/Fevereiro/2019</h3>
+					</hgroup>
+				</header>
+
+				<div id="tv-radio">
+					<audio id="musica" controls="controls">
+						<!--inserir música e tag "controls" para aparecer os botões de play/pause/etc-->
+						<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg" />
+						<!--cada navegador usa formatos de vídeo diferentes, tem que consultar o formato dos vídeos antes-->
+					</audio>
+
+					<!--cada navegador usa formatos de vídeo diferentes, tem que consultar o formato dos vídeos antes-->
+					<!--
+							VÍDEO DO PRÓPRIO PROJETO
+							<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">							
+								<source src="_media/getting-started.mp4" type ="video/mp4"> 
+								<source src="_media/how-it-feels.mp4" type ="video/mp4">
+								<source src="_media/one-day.mp4" type ="video/mp4">
+							</video>
+							OU ABAIXO, VÍDEO LINKADO DIRETO DO YOUTUBE
+						-->
+
+					<iframe id="filme" width="560" height="315" src="https://www.youtube.com/embed/4EvNxWhskf8"
+						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+
+			</article>
+		</section>
+
+
+
+		<footer id="rodape">
+			<p>Copyright 2019 - by Gabriel Netto </br>
+				<a id="linkFacebook" href="https://www.facebook.com/gabriel.netto.98" target="_blank">Facebook</a>
+			</p>
+		</footer>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- LINGUAGEM PT-BR-->
+
+<head>
+    <meta charset="utf-8" /> <!-- PADRÃO DE CARACTER BR-->
+    <title>Tudo Sobre Google Glass</title>
+
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <!--aponta para um documento css -->
+    <link rel="shortcut icon" href="_imagens/icone.png" type="image/x-png">
+    <!--logo na aba do navegador -->
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <!--
+        método local para calcular o total
+    -->
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="interface">
+
+        <header id="cabecalho">
+            <!--CABEÇALHO DO SITE <header>-->
+            <hgroup>
+                <!--GRUPOS DE TÍTULOS COM HIERARQUIA <hgroup>-->
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens\contato.png">
+
+            <nav id="menu">
+                <!--MENU DE NAVEGAÇÃO <nav>-->
+                <h1>Menu Principal</h1>
+                <ul type="1" start="0  ">
+                    <!--LISTA ORDENADA "<ol> DESORDENADA <ul>" -->
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="index.html">Home</a></li>
+                    <!--ITEM DA LISTA <li>-->
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpoEspecs">
+            <article id="noticia-principal">
+                <!--artigo -->
+                <header id="cabecalho-artigo">
+                    <!--cabecalho do artigo, podendo ter vários cabecalhos-->
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gabriel Gregório Silveira Netto</h2>
+                        <h3 class="direita ">Atualizado em 25/Fevereiro/2019</h3>
+                    </hgroup>
+                </header>
+                <form method="POST" id="fContato" action="mailto:meuEmail@dominio.com" oninput="calc_total();">
+                    <!--PARA BUSCAR SIMPLES UTILIZAR O MÉTODO GET, E PARA DADOS MAIS SENSÍVEIS UTILZIAR O MÉTODO POST   get=rapido/menos seguro || post=lento/mais seguro-->
+                    <fieldset id="usuario">
+                        <!--criar campos do formulario-->
+                        <legend> Identificação do Usuário:</legend>
+                        <!--titulo do campo-->
+
+                        <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="30"
+                                maxlength="50" placeholder="Nome Completo" /></p>
+
+                        <!--CAIXA DE TEXTO-->
+                        <p> <label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="8"
+                                maxlength="8" placeholder="8 Dígitos" /> </p>
+
+                        <p><label for="cMail">E-mail: </label><input type="email" name="tMail" id="cMail" size="20"
+                                maxlength="30" placeholder="Email" /></p>
+
+                        <fieldset id="sexo">
+                            <legend>Sexo: </legend>
+                            <!--Deixar o "name" igual para criar um "grupo de botão" -->
+                            <input type="radio" name="tSexo" id="cMasc" /><label for="cMasc">Masculino</label> <br><br>
+
+                            <!--<label for="cMasc">Masculino</label>  ao clicar na palavra ele marca o radioButton-->
+                            <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label>
+
+                        </fieldset>
+                        <p>Data de Nascimento: <input type="date" name="" id=""></p>
+                    </fieldset>
+
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+
+                        <p><label for="cRua">Logradouro: </label><input type="text" name="tRua" id="cRua" size="30"
+                                maxlength="50" placeholder="Rua, Avenida..."></p>
+
+                        <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0"
+                                max="9999" maxlength="10" placeholder="Número"></p>
+
+                        <p><label for="cEst">Estado: </label>
+                            <!--<input type="text" name="tEst" id="cEst"></p>-->
+                            <select name="tEst" id="cEst">
+                                <!--Valeu é o que realmente será enviado, por exemplo, a um Banco de dados-->
+                                <optgroup label="Região Sudeste">
+
+                                    <option value="RJ">Rio de Janeiro</option>
+
+                                    <option value="SP">São Paulo</option>
+
+                                </optgroup>
+
+                                <optgroup label="Região Sul">
+
+                                    <option value="PR">Paraná</option>
+
+                                    <option value="RS">Rio Grande do Sul</option>
+
+                                    <option value="SC">Santa Catarina</option>
+
+                                </optgroup>
+
+                                <optgroup label="Região Norte">
+
+                                    <option value="RN">Rio Grande do Norte</option>
+
+                                </optgroup>
+                            </select>
+
+                            <p><label for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid" size="20"
+                                    maxlength="40" placeholder="Sua Cidade" list="cidades"></p>
+
+                            <!--cria um datalist para linkar com a cidade pelo ID-->
+                            <datalist id="cidades">
+
+                                <option value="Rio De Janeiro"></option>
+
+                                <option value="Nova Iguaçu"></option>
+
+                                <option value="Niterói"></option>
+
+                                <option value="Belford Roxo"></option>
+                            </datalist>
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+
+                        <p><label for="cUrg">Grau de Urgência: </label>Min<input type="range" name="tUrg" id="cUrg"
+                                min="0" min="10" step="2">Max</p>
+
+                        <p><label for="cMsg">Mensagem:</label>
+                            <textarea name="tMsg" id="cMsg" cols="28" rows="5"
+                                placeholder="Digite sua Mensagem"></textarea></p>
+                    </fieldset>
+
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+
+                        <p><input type="checkbox" name="tPed" id="cPed" checked>
+                            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+                        <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor" value="#0000FF">
+                        </p>
+
+                        <p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0"
+                                    max="5"></label></p>
+
+                        <p><label for="cTot">Preço Total: <input type="text" name="tTot" id="cTot"
+                                    placeholder="Total em R$" readonly></label></p>
+                    </fieldset>
+
+                    <!--<input type="submit" value="Enviar"/>    OUTRO EXEMPLO DE BOTÃO-->
+                    <input type="image" src="_imagens/botao-enviar.png" />
+
+                </form>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright 2019 - by Gabriel Netto </br>
+                <a id="linkFacebook" href="https://www.facebook.com/gabriel.netto.98" target="_blank">Facebook</a>
+            </p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
